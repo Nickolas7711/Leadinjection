@@ -35,6 +35,10 @@ $border-tab-red: #FF001F;
     font-size: $fs;
     line-height: $lh;
 }
+html{
+    overflow-x: hidden;
+}
+
 body{
     background: $bg-block;
     
@@ -52,7 +56,7 @@ body{
     flex-direction: row;
     align-items: center;
     span{
-        @include font-face(400, 24px, 32px);
+        @include font-face(400, 1.5rem, 32px);
     }
     b{
         font-weight: 700;
@@ -66,11 +70,13 @@ body{
 }
 .menu{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 1.25vw 0;
+    padding: 1.25vw 4.69vw;
     background-color: $bg-header-menu;
+    
 }
+
 .header__menu-item{
     display: flex;
     flex-direction: row;
@@ -78,8 +84,16 @@ body{
     gap: 24px;
     
     li{
-        @include font-face(400, 16px, 24px);
+        @include font-face(400, 1rem, 24px);
         color: $ling-text;
+    }
+    a:hover{
+      
+        border-bottom: 2px solid $ling-text;
+    }
+    a.menu__dropbtn{
+        border-bottom: 2px solid $ling-text;
+        
     }
 }
 .menu__dropdown{
@@ -97,28 +111,40 @@ body{
 .menu__dropdown-content {
     display: none;
     position: absolute;
-    z-index: 1;
+    z-index: 5;
+    background: $bg-header-menu;
+    border-radius: 0 0 32px 32px;
+    width: 300px;
+    
     a {
-        @include font-face(400, 16px, 24px);
+        @include font-face(400, 1rem, 24px);
         color: black;
-        padding: 12px 16px;
+        padding: 10px 15px;
         text-decoration: none;
         display: block;
+        margin-top: 10px;
+        
     }
     a:hover {
-        background-color:$bg-header-menu;
+        background-color: $health-green;
+        border-radius: 32px;
+        color: $text-white;
+        border: none;
     }
 }
 .menu__dropdown:hover .menu__dropdown-content {
     display: block;
+    
 }
 .contact{
     display: flex;
     align-items: center;
     gap: 32px;
+    border: none;
     a{
-        @include font-face(400, 16px, 24px);
+        @include font-face(400, 1rem, 24px);
         color: $head-text;
+        
     }
 }
 .fitness{
@@ -134,13 +160,13 @@ body{
     align-items: center;
     text-align: center;
     width: 31vw;
-    gap: 20px;
+    gap: 1.042vw;
 
 &__title{
     color: $title-pro;
 }
 &__subtitle{
-    @include font-face(700, 48px, 56px);
+    @include font-face(700, 3rem, 56px);
     color: $text-main;
 }
 &__description{
@@ -148,32 +174,31 @@ body{
 }
 }
 .title{
-    @include font-face(500, 48px, 3.5rem);
+    @include font-face(500, 3rem, 56px);
 }
-.title--font400{
-    @include font-face(400, 48px, 56px);
-}
+
 
 
 .description{
-    @include font-face(400, 16px, 24px);
+    @include font-face(400, 1rem, 24px);
 }
 .btn-box{
-    // display: flex;
+    display: flex;
     align-items: center;
-    gap: 1vw;
-    @include font-face(400, 16px, 24px);
+    gap: 19px;
+    @include font-face(400, 1rem, 24px);
 
 &__btn{
     border: none;
-    padding: .84vw 1.66vw;
     border-radius: 32px;
 }
 &--red{
+    padding: 16px 32px;
     background: $red;
     color: $text-white;
 }
 &--green{
+    padding: 16px 32px;
     background: $health-green;
     border-radius: 32px;
     color: $text-white;
@@ -184,6 +209,7 @@ body{
     border: 2px solid $health-green;
     border-radius: 24px;
     color: $health-green;
+    margin: auto;
 }
 &--fill-green-btn-mail{
     padding: 8px 32px;
@@ -209,7 +235,7 @@ body{
 }
 
 .subtitle{
-    @include font-face(400, 24px, 32px);
+    @include font-face(400, 1.5rem, 32px);
     color: $text-main;
 }
 
@@ -219,9 +245,11 @@ body{
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    padding: 50px 0;
     &__title{
-    margin: 80px 0 16px 0 ;
-    color: $head-text;
+        @include font-face(500, 3rem, 56px);
+        padding: 2.604vw 0;
+        color: $head-text;
     }
     &__subtitle{
         margin-bottom: 50px;
@@ -231,6 +259,7 @@ body{
     &__content{
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         gap: 73px;
         margin-bottom: 46px;
     }
@@ -243,9 +272,10 @@ body{
 
 }
 .box__number-item{
-    @include font-face(700, 48px, 56px);
+    @include font-face(700, 3rem, 56px);
     color: $health-green;
 }
+
 
 
 
@@ -253,30 +283,35 @@ body{
     text-align: left;
 
     &__title-item{
-        @include font-face(700, 20px, 32px);
+        @include font-face(700, 1.25rem, 32px);
         color: $text-main;
     }
     &__subtitle-item{
-        @include font-face(400, 16px, 24px);
+        @include font-face(400, 1rem, 24px);
         color: $text-main;
 
     }
     &__description-item{
         width: 337px;
         margin-top: 16px;
-        @include font-face(400, 16px, 24px);
+        @include font-face(400, 1rem, 24px);
         color: $text-main;
     }
 }
 .dishes__bgr-preview{
     background: url('./image/bgr-preview.jpg') no-repeat;
     background-size: 100%;
-    margin-top: 30px;
+
 }
 .dishes__conteiner{
     display: flex;
-    padding: 35px 14.85vw 75px 14.85vw;
-    width: 1652px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    // padding: 1.82vw 14.85vw 3.91vw 14.85vw;
+    // max-width: 1920px;
     gap: 32px;
     
 }
@@ -291,10 +326,10 @@ body{
     @include font-face(400, 24px, 32px);
 }
 .subtitle-item{
-    @include font-face(400, 16px, 24px);
+    @include font-face(400, 1rem, 24px);
 }
 .description-item{
-    @include font-face(400, 16px, 24px);
+    @include font-face(400, 1rem, 24px);
 }
 
 .preview-box__title-item{
@@ -302,10 +337,11 @@ body{
     color: $text-main;
 }
 .preview-box__subtitle-item{
-    
+    text-align: center;
     color: $text-main;
 }
 .preview-box__description-item{
+    text-align: center;
     color: $text-main;
     max-width: 320px;
 }
@@ -329,13 +365,14 @@ body{
 
     }
     &__title{
+        @include font-face(400, 3rem, 3.5rem);
         color: $health-green;
     }
     &__subtitle{
         color: $head-text;
     }
     &__descriptions{
-        @include font-face(400, 16px, 24px);
+        @include font-face(400, 1rem, 24px);
         color: $head-text;
         max-width: 696px;
 
@@ -347,22 +384,23 @@ body{
     }
 
 }
-.line{
+.line, .line-bott{
     border:2px solid $health-green;
-    max-width: 1386px;
+    max-width: 83.125vw;
     border-radius: 2px;
     opacity: 0.35;
     margin: auto;
 
     
 }
-.revievs{
-    padding: 24px 140px ;
+.revievs, .revievs-scroll{
+    padding: 24px 140px;
 
 }
 .box-content{
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -381,16 +419,17 @@ body{
     flex-direction: column;
 }
 .reviev__description{
+    @include font-face(400, 1rem, 24px);
     color: $head-text;
     width: 280px;
     margin-bottom: 16px;
 }
 
 .inner-list__name-lost{
-    @include font-face(400, 16px, 24px);
+    @include font-face(400, 1rem, 24px);
     color: $health-green;
     b{
-        @include font-face(500, 18px, 24px);  
+        @include font-face(500, 1.125rem, 24px);  
         margin-right: 4px;
     }
     margin-bottom: 8px;
@@ -410,12 +449,9 @@ body{
     align-items: center;
     background: rgba($health-green, .12);
     margin-top: 64px;
-    
-    
-    
-    
+        
     &__title{
-    @include font-face(400, 48px, 56px);
+    @include font-face(400, 3rem, 56px);
     margin: 80px 0 16px 0 ;
     }
     &__subtitle{
@@ -424,21 +460,25 @@ body{
     &__content{
     display: flex;
     justify-content: space-evenly;
-    width: 1652px;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin-bottom: 2.61vw;
     
     }
     
 }
-.program-plan__box{    
+.program-plan__box{  
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    gap: 20px
 }
 .inner-list__title{
-    @include font-face(500, 22px, 24px);
+    @include font-face(500, 1.375rem, 24px);
     color: $head-text;
 }
 .inner-list__description{
-    @include font-face(400, 16px, 24px);
+    @include font-face(400, 1rem, 24px);
     color: $ling-text;
     width: 276px;
 }
@@ -449,46 +489,45 @@ body{
     text-align: center;
     border: 1px solid $border-tab-blue;
     &__title {
-        @include font-face(400, 24px, 32px);
+        @include font-face(400, 1.5rem, 32px);
         color: $head-text;
     }
     &__title--price{
         padding: 24px 0;
     }
     &__subtitle{
-        @include font-face(400, 16px, 24px);
+        @include font-face(400, 1rem, 24px);
         color: $text-main;
         b{
-            @include font-face(400, 24px, 32px);
+            @include font-face(400, 1.5rem, 32px);
             color: $head-text; 
         }
     }
     &__description{
-        @include font-face(400, 16px, 24px);
+        @include font-face(400, 1rem, 24px);
         color: $head-text;
         b{
-        @include font-face(300, 58px, 56px);
+        @include font-face(300, 3.625rem, 56px);
         color: $head-text;
         }
     }
 
-}
-
-th{
-    width: 304px;
-    height: 88px;
+td, th{
+    padding: 1.25vw 5.21vw;
     border: 1px solid rgba($border-tab-blue, .5);
+    }
+    
 }
-td{
-    width: 304px;
-    height: 48px;
-    border: 1px solid rgba($border-tab-blue, .5);
+.bor-red-right{
+    border-right-color: red !important;
 }
-.tabl-btn{
-
-    padding: 52px 0;
+.bor-top-right-red{
+    border-top-color: red !important;
+    border-right-color: red !important;
 }
-
+.bor-red-but{
+    border-block-color: red !important;
+}
 
 .recommendation__box{
     display: flex;
@@ -497,11 +536,16 @@ td{
     gap: 72px;
 
 }
+.recommendation__inner-list{
+    display: flex;
+    flex-direction: column;
+}
 .recommendation__title-item{
     color: $head-text;
     margin: 15px 0;
 }
 .recommendation__description{
+    @include font-face(400, 1rem, 24px);
     width: 26.5vw;
     color: $ling-text;
 }
@@ -513,13 +557,11 @@ td{
 .subscription-mail__forma-box{
     display: flex;
     flex-direction: column;
-    
-    background-color: $text-white;
+        background-color: $text-white;
     border-radius: 10px;
 }
 .subscription-mail__conteiner{
     display: flex;
-
     padding: 140px 49.85vw 182px 12.85vw;
     width: 1652px;
     gap: 32px;
@@ -536,12 +578,12 @@ td{
     margin-bottom: 31px;
 }
 .forma-box__description-question{
-    @include font-face(400, 12px, 18px);
+    @include font-face(400, 0.75rem, 18px);
     color: $head-text;
     
 }
 .forma-box__description-call{
-    @include font-face(500, 12px, 18px);
+    @include font-face(500, 0.75rem, 18px);
     color: $head-text;
     margin-bottom: 40px;
 }
@@ -550,7 +592,7 @@ td{
     background: #F0E9E9;
     border: 1px solid #888282;
     border-radius: 32px;
-    @include font-face(400, 16px, 24px);
+    @include font-face(400, 1rem, 24px);
     color: $placeholder;
     padding: 8px 160px 8px 16px;
     margin-bottom: 16px;
@@ -561,7 +603,7 @@ td{
     align-items: center;
     gap: 23px;
     p{
-        @include font-face(400, 9px, 24px);
+        @include font-face(400, 0.563rem, 24px);
         color: $head-text;
     }
 
@@ -570,14 +612,15 @@ td{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
     &__title{
-        @include font-face(500, 48px, 56px);
+        @include font-face(500, 3rem, 56px);
         color: $head-text;
         margin-top: 72px;
         
     }
     &__subtitle{
-        @include font-face(400, 24px, 32px);
+        @include font-face(400, 1.5rem, 32px);
         color: $ling-text;
         width: 999px;
         text-align: center;
@@ -586,12 +629,12 @@ td{
     }
 }
 .inner-list__name{
-    @include font-face(500, 18px, 24px);
+    @include font-face(500, 1.125rem, 24px);
     color: $health-green;
 }
 
 .profil__title-inner{
-    @include font-face(700, 12px, 18px);
+    @include font-face(700, 0.75rem, 18px);
     color: $head-text;
     padding: 8px 0;
 }
@@ -599,24 +642,36 @@ td{
     color: $ling-text;
     width: 309px;
 }
-
 .coaches__list{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 90px;
+    margin:2.084vw 0;
+}
+
+
+.coaches__box-content{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
 }
 .coache__name-social{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 42px;
+}
+.coache__inner-list{
+    display: flex;
+    flex-direction: column;
 }
 .coache__inner-box{
     display: flex;
     gap: 25px;
 }
 .additional-information{
-    @include font-face(400, 24px, 32px);
+    @include font-face(400, 1.5rem, 32px);
     color: $ling-text;
     padding: 64px 0 72px 0;
 }
@@ -628,19 +683,23 @@ td{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 16px;
     padding: 80px 0;
 }
 .request__description{
-    @include font-face(700, 24px, 32px);
+    @include font-face(700, 1.5rem, 32px);
     color: $text-white;
 }
 .footer__navigation{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
     height: 300px;
+   
+
 }
 
 .agreement{
@@ -649,29 +708,31 @@ td{
     align-items: flex-start;
     justify-content: space-evenly;
     height: 228px;
+    
+    
 }
 
 .agreement__title{
-    @include font-face(400, 12px, 14px);
+    @include font-face(400, 0.75rem, 14px);
     color: $head-text;
     margin-bottom: 25px;
 }
 .agreement__subtitle{
-    @include font-face(400, 12px, 14px);
+    @include font-face(400, 0.75rem, 14px);
     color: $black;
 }
 .agreement__description{
-    @include font-face(400, 12px, 14px);
+    @include font-face(400, 0.75rem, 14px);
     color: $text-main;
     width: 280px;
 }
 .box-navigation__title{
-    @include font-face(400, 16px, 24px);
+    @include font-face(400, 1rem, 24px);
     color: $text-main;
     margin-bottom: 15px;
 }
 .box-navigation__list-item{
-    @include font-face(400, 16px, 35px);
+    @include font-face(400, 1rem, 35px);
     color: $head-text;
 }
 .navigation-conteiner{
@@ -680,4 +741,379 @@ td{
     justify-content: space-evenly;
     width: 560px;
     
+}
+// @media(max-width: 1751px){
+//     .stories__title{
+//     @include font-face(400, 3rem, 56px);
+//     }
+// } 
+
+@media(max-width: 1734px){
+    .description{
+        line-height: 22px;
+    }
+    .call-to-action__subtitle{
+        line-height: 44px;
+    }
+    .title{
+        line-height: 44px;
+    }
+   
+}
+@media(max-width: 1622px){
+.revievs-scroll{
+    display: none;
+}
+.line-bott{
+    display: none;
+}
+    
+}
+
+@media(max-width: 1407px){
+    .description{
+        line-height: 20px;
+    }
+    .call-to-action__subtitle{
+        line-height: 40px;
+        font-size: 2.8rem;
+        
+    }
+    .title{
+        line-height: 40px;
+        font-size: 2.8rem;
+    }
+    
+    
+}
+
+@media (max-width: 1376px){
+    .call-to-action{
+        width: 40vw;
+        align-items: flex-start;
+    }
+    .description{
+        text-align: left;
+    }
+    .revievs__inner-list{
+        margin: 0;
+    }
+}
+@media (max-width: 1154px){
+   .stories{
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 50px 20px;
+    gap: 30px;
+   }
+   .stories__box-tsd{
+    align-items: center;
+   }
+   .recommendation__description{
+    width: 32.67vw;
+    margin: 0;
+   }
+
+}
+
+
+@media (max-width: 1122px){
+    .fitness{
+        padding: 6.21vw 0 2.084vw 7.021vw;
+    }
+    .recommendation__title-item{
+        width: 360px;
+        text-align: center;
+    }
+    
+}
+@media (max-width: 1035px){
+    .btn-box{
+        line-height: 14px;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 1020px){
+    .call-to-action{
+        width: 46vw;
+    }
+    .call-to-action__subtitle {
+    line-height: 35px;
+    font-size: 2.5rem;
+    }
+    .title{
+    line-height: 35px;
+    font-size: 2.5rem;
+    }
+    .description{
+        font-size: 0.8rem;
+    }
+    .program-plan__subtitle{
+        padding: 0 30px;
+        text-align: center;
+    }
+    .tabl__title, .tabl__title--price{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+@media (max-width: 936px){
+    .contact{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 156px;
+        gap: 5px;
+
+    }
+    .menu__dropdown-content{
+        right: 0;
+    }
+    .tabl{
+        margin: 0;
+    }
+    
+}
+
+
+@media (max-width: 858px){
+    .fitness {
+        padding: 4.21vw 0 3.084vw 4.021vw;
+    }
+    .call-to-action{
+        width: 46vw;
+    }
+    .call-to-action__subtitle {
+    line-height: 29px;
+    font-size: 2.3rem;
+    }
+    .title{
+    line-height: 29px;
+    font-size: 2.3rem;
+    }
+    
+}
+
+@media (max-width: 830px){
+    .menu{
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 10px;
+        
+    }
+
+    .header__menu-item{
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background: $bg-header-menu;
+        width: 298px;
+        padding: 15px 10px;
+    
+        li{
+            padding: 10px 0;
+        }
+        
+
+    }
+
+    .header__menu li{
+        width: 100%;
+    }
+    .header__menu nav::before,
+    .header__menu::after {
+    content: '';
+    position: absolute;
+    top: 61px;
+    left: 10px;
+    display: block;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAwCAMAAAA8VkqRAAAABlBMVEUAAAAAAAClZ7nPAAAAAXRSTlMAQObYZgAAAE5JREFUeAFjwAkYcQC6SFAKBt4fo/6AaMMUQTUQIYJpFaqrMIICzkATR2Hi5uDUjmkh7tDAHUq4Qw8ujl+CsFEEHDVowg1n1OJKDLiTDwBLrgJ9vkuXOwAAAABJRU5ErkJggg==);
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    }
+    .header__menu nav::before,
+    .header__menu::after {
+    background-color: $health-green;
+    border: 9px solid $health-green;
+    }
+    .header__menu::after {
+    background-position: 24px 24px;
+    z-index: 1;
+    }
+    .header__menu nav::before {
+    z-index: 2;
+    }
+    .header__menu nav:focus::before {
+    z-index: 0;
+    }
+    .header__menu nav:focus ul,
+    .menu ul:hover {
+    display: block;
+    }
+    .header__menu nav{
+        display: block;
+    }
+    
+    .menu__dropdown{
+        position: relative;
+        margin-left: 42px;
+        margin-top: -33px;
+        background: none;
+        
+        
+    }
+    .menu__dropdown-content{
+        left: -54px;
+        
+        
+}
+
+
+}
+@media (max-width: 738px){
+    .fitness {
+        padding: 4.21vw 0 3.084vw 4.021vw;
+    }
+    .call-to-action{
+        width: 49vw;
+    }
+    .call-to-action__subtitle {
+    line-height: 24px;
+    font-size: 1.8rem;
+    }
+    .title{
+    line-height: 24px;
+    font-size: 1.8rem;
+    }
+    .description{
+        max-height: 62px;
+        overflow: hidden;
+    }
+    .btn-box{
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        gap: 10px;
+        
+    }
+    .tabl__description b{
+        font-size: 2.625rem;
+    }
+    .tabl_subtitle b{
+        font-size: 1.2rem;
+    }
+    
+}
+@media (max-width: 658px){
+    .fitness {
+        padding: 4.21vw 0 3.084vw 2.021vw;
+        flex-wrap: nowrap;
+    }
+    
+    .recipes__subtitle{
+        text-align: center;
+        margin: 0;
+        padding: 20px 20px;
+    }
+    .stories__box-tsd{
+        text-align: center;
+    }
+    .program-plan__subtitle{
+        margin: 0px;
+        padding: 20px 20px;
+    }
+    .program-plan__title{
+        margin: 0;
+        padding: 30px 30px;
+        text-align: center;
+    }
+    
+    .program-plan__content{
+        gap: 20px;
+    }
+   
+}
+
+@media (max-width: 557px){
+        
+    
+    .call-to-action__subtitle {
+    line-height: 20px;
+    font-size: 1.5rem;
+    }
+    .title{
+    line-height: 20px;
+    font-size: 1.5rem;
+    }
+    .description{
+        max-height: 56px;
+    }
+    .btn-box{
+        line-height: 22px;
+    }
+    .recommendation__title-item{
+        text-align: center;
+        
+    }
+    .recommendation__description{
+        width: 78.84vw;
+    }
+    
+}
+
+@media (max-width: 518px){
+    
+    .call-to-action__subtitle {
+    line-height: 19px;
+    font-size: 1.2rem;
+    }
+    .title{
+    line-height: 19px;
+    font-size: 1.2rem;
+    }
+    .description{
+        max-height: 40px;
+    }
+
+
+}
+
+@media (max-width: 456px){
+
+    .description{
+        max-height: 0;
+    }
+    .stories__img img{
+        width: 360px;
+        height: 360px;
+    }
+    .dishes__preview-box{
+        width: 364px;
+    }
+    .preview-box__line{
+        width: 364px;
+    }
+    .preview-box__photo{
+        width: 352px;
+    }
+
+.revievs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recommendation__box-content{
+    justify-content: center;
+    gap: 10px;
+}
+.recommendation__description{
+    text-align: center;
+}
+
 }

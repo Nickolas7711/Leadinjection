@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initiale-scale=1.0">
 <link rel="stylesheet" href="./styles/style.css">
 <title>Leadinjection</title>
 </head>
@@ -22,7 +23,7 @@
             </nav>
         </div>
         <div class="header__menu menu">
-            <nav>
+            <nav tabindex='1'>
                 <ul class="header__menu-item">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">How It Works</a></li>
@@ -35,13 +36,13 @@
                         <button class="menu__dropbtn">
                             <img src="./styles/image/Arrow 3.png" alt="">
                         </button>
-                        <div class="menu__dropdown-content">
-                            <a href="How It Works">How It Works</a>
-                            <a href="#">link2</a>
-                            <a href="#">link3</a>
-                            <a href="#">link4</a>
-                            <a href="#">link5</a>
-                        </div>
+                        <ul class="menu__dropdown-content">
+                            <li><a href="#1">How It Works</a></li>
+                            <li><a href="#2">Weight Loss Success Stories</a></li>
+                            <li><a href="#3">What Does Program Include?</a></li>
+                            <li><a href="#4">Qualified Nutrition & Health Coaches</a></li>
+                            <li><a href="#5">Subscribe to Our Newsletters</a></li>
+                        </ul>
                     </div>
                 </ul>
             </nav>
@@ -63,7 +64,7 @@
         </div>
     </section>
     <section class="recipes">
-        <div class="recipes__title title">How It Works</div>
+        <div id="1" class="recipes__title">How It Works</div>
         <div class="recipes__subtitle subtitle">3 Important Steps to Lose Healthy and Durable Your Weight</div>
         <div class="recipes__content content">
             <div class="recipes__box box">
@@ -93,7 +94,7 @@
         </div>        
         <button class="btn-box__btn btn-box btn-box--no-fill">Start Your Jorney Today</button>
     </section>
-        <div class="dishes__bgr-preview">
+    <div class="dishes__bgr-preview">
             <div class="dishes__conteiner">
                 <div class="dishes__preview-box">
                     <img class="preview-box__photo" src="./styles/image/smoothie.jpg" alt="smoothie">
@@ -118,11 +119,11 @@
                 </div>
             </div>
         </div>
-    <sections class="stories">
+        <sections class="stories">
         <div class="stories__box-tsd">
-            <div class="stories__title title title--font400">Weight Loss Success Stories</div>
+            <div id="2"  class="stories__title">Weight Loss Success Stories</div>
             <div class="stories__subtitle subtitle">Get inspired by Julie B. and her amazing, real-life success story</div>
-            <div class="stories__descriptions description">
+            <div class="stories__descriptions">
                 <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><br>
                 <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
             </div>
@@ -138,7 +139,7 @@
                 <img class="person-photo" src="./styles/image/man1.png" alt="man" >
             </div>
             <div class="revievs__inner-list">
-                <div class="reviev__description description">
+                <div class="reviev__description">
                     <p>Sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                 </div>
                     <div class="inner-list__name-lost"><b>Rose Brooks</b>(lost 52 ibps)</div>
@@ -154,7 +155,7 @@
                 <img class="person-photo" src="./styles/image/woman1.png" alt="woman" >
             </div>
             <div class="revievs__inner-list">
-                <div class="reviev__description description">
+                <div class="reviev__description">
                     <p>Sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                 </div>
                 <div class="inner-list__name-lost"><b>Rose Brooks</b>(lost 52 ibps)</div>
@@ -170,15 +171,15 @@
     </div>
     <div class="arrow-box">
         <img src="./styles/image/arrow L.png" alt="arrow L">
-        <img src="./styles/image/arrowR.png" alt="arrowR">
+        <img src="./styles/image/arrowR.png" alt="arrow R">
     </div>
-    <div class="revievs">
+    <div class="revievs-scroll">
         <div class="revievs__box-content box-content box-content--right">
             <div class="revievs__photo-item">
                 <img class="person-photo" src="./styles/image/man2.png" alt="man" >
             </div>
             <div class="revievs__inner-list">
-                <div class="reviev__description description">
+                <div class="reviev__description">
                     <p>Sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                 </div>
                     <div class="inner-list__name-lost"><b>Rose Brooks</b>(lost 52 ibps)</div>
@@ -194,7 +195,7 @@
                 <img class="person-photo" src="./styles/image/woman2.png" alt="woman" >
             </div>
             <div class="revievs__inner-list">
-                <div class="reviev__description description">
+                <div class="reviev__description">
                     <p>Sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                 </div>
                 <div class="inner-list__name-lost"><b>Rose Brooks</b>(lost 52 ibps)</div>
@@ -208,9 +209,9 @@
             </div>          
         </div>
     </div>
-    <div class=" line"></div>
-    <section class="program-plan">
-        <div class="program-plan__title">What Does Program Include?</div>
+    <div class=" line-bott"></div>
+<section class="program-plan">
+        <div id="3"  class="program-plan__title">What Does Program Include?</div>
         <div class="program-plan__subtitle subtitle">From healthy diet plans to body measuring, we will tailor a custom diet plan for you to follow</div>
         <div class="program-plan__content">
             <div class="program-plan__box">
@@ -244,52 +245,53 @@
         </div>
     </section> 
     <table class="tabl">
+        
         <tr>
             <th></th>
-            <th class="tabl__subtitle"><b>Standart</b><br>8 weeks membership</th>
-            <th class="tabl__subtitle"><b>Advance</b><br>12 weeks membership</th>
+            <th class="tabl__subtitle bor-red-right"><b>Standart</b><br>8 weeks membership</th>
+            <th class="tabl__subtitle bor-top-right-red"><b>Advance</b><br>12 weeks membership</th>
             <th class="tabl__subtitle"><b>Premium</b><br>25 weeks membership</th>
         </tr>
         <tr>
             <td class="tabl__title tabl__title--price">Price</td>
-            <td class="tabl__description">$<b>29</b>/mo</td>
-            <td class="tabl__description">$<b>49</b>/mo</td>
+            <td class="tabl__description bor-red-right">$<b>29</b>/mo</td>
+            <td class="tabl__description bor-top-right-red">$<b>49</b>/mo</td>
             <td class="tabl__description">$<b>99</b>/mo</td>
         </tr>
         <tr>
             <td class="tabl__title">Diet plan</td>
-            <td class="tabl__description">1</td>
-            <td class="tabl__description">2</td>
+            <td class="tabl__description bor-red-right">1</td>
+            <td class="tabl__description bor-top-right-red">2</td>
             <td class="tabl__description">2</td>
         </tr>
         <tr>
             <td class="tabl__title">Body shape plan</td>
-            <td class="tabl__description">1</td>
-            <td class="tabl__description">2</td>
+            <td class="tabl__description bor-red-right">1</td>
+            <td class="tabl__description bor-top-right-red">2</td>
             <td class="tabl__description">Unlimited</td>
         </tr>
         <tr>
             <td class="tabl__title">Online recipe club</td>
-            <td class="tabl__description">yes</td>
-            <td class="tabl__description">yes</td>
+            <td class="tabl__description bor-red-right">yes</td>
+            <td class="tabl__description bor-top-right-red">yes</td>
             <td class="tabl__description">yes</td>
         </tr>
         <tr>
             <td class="tabl__title">Diet Diagnosis</td>
-            <td class="tabl__description">no</td>
-            <td class="tabl__description">no</td>
+            <td class="tabl__description bor-red-right">no</td>
+            <td class="tabl__description bor-top-right-red">no</td>
             <td class="tabl__description">no</td>
         </tr>
         <tr>
             <td class="tabl__title">Personal Diet Coach</td>
-            <td class="tabl__description">no</td>
-            <td class="tabl__description">yes</td>
+            <td class="tabl__description bor-red-right">no</td>
+            <td class="tabl__description bor-top-right-red">yes</td>
             <td class="tabl__description">yes</td>
         </tr>
         <tr>
             <td class="tabl-btn"></td>
-            <td><button class="btn-box__btn btn-box btn-box--no-fill">Start Today</button></td>
-            <td><button class="btn-box__btn btn-box btn-box--no-fill">Start Today</button></td>
+            <td class="bor-red-right"><button class="btn-box__btn btn-box btn-box--no-fill">Start Today</button></td>
+            <td class="bor-top-right-red bor-red-but"><button class="btn-box__btn btn-box btn-box--no-fill">Start Today</button></td>
             <td><button class="btn-box__btn btn-box btn-box--no-fill">Start Today</button></td>
         </tr>
     </table>
@@ -300,7 +302,7 @@
             </div>
             <div class="recommendation__inner-list">
                 <div class="recommendation__title-item title-item">What’s the best diet for weight loss? </div>
-                <div class="recommendation__description description">
+                <div class="recommendation__description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc velit nibh, tempor in gravida quis, faucibus sit amet dolor. Integer hendrerit lacus tempor nibh luctus, mollis elementum nisi vestibulum. Praesent vel lacus et purus vulputate mollis. </p>
                 </div>
             </div> 
@@ -309,7 +311,7 @@
             </div>
                 <div class="recommendation__inner-list">
                     <div class="recommendation__title-item title-item">What is the best way to get vitamin B12?</div>
-                <div class="recommendation__description description">
+                <div class="recommendation__description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc velit nibh, tempor in gravida quis, faucibus sit amet dolor. Integer hendrerit lacus tempor nibh luctus, mollis elementum nisi vestibulum. Praesent vel lacus et purus vulputate mollis. </p>
                 </div>
             </div>            
@@ -320,7 +322,7 @@
             </div>
             <div class="recommendation__inner-list">
                 <div class="recommendation__title-item title-item">Should I be on a gluten-free diet?</div>
-                <div class="recommendation__description description">
+                <div class="recommendation__description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc velit nibh, tempor in gravida quis, faucibus sit amet dolor. Integer hendrerit lacus tempor nibh luctus, mollis elementum nisi vestibulum. Praesent vel lacus et purus vulputate mollis. </p>
                 </div>
             </div> 
@@ -329,7 +331,7 @@
             </div>
             <div class="recommendation__inner-list">
                 <div class="recommendation__title-item title-item">Do you recommend a vegetarian diet?</div>
-                <div class="recommendation__description description">
+                <div class="recommendation__description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc velit nibh, tempor in gravida quis, faucibus sit amet dolor. Integer hendrerit lacus tempor nibh luctus, mollis elementum nisi vestibulum. Praesent vel lacus et purus vulputate mollis. </p>
                 </div>
             </div>            
@@ -339,7 +341,7 @@
         <div class="subscription-mail__bgr">
             <div class="subscription-mail__conteiner">
                 <div class="subscription-mail__forma-box">
-                    <div class="forma-box__title-item title-item">Subscribe to Our Newsletters</div>
+                    <div id="5" class="forma-box__title-item title-item">Subscribe to Our Newsletters</div>
                     <div class="forma-box__subtitle-item subtitle-item">Let us bring health advice directly to you.</div>
                     <p class="forma-box__description-question">Have you been wanting to improve your lifestyle and get healthier?</p>
                     <p class="forma-box__description-call">Don’t wait: Start TODAY! TODAY’s</p>
@@ -356,10 +358,10 @@
         </div>
     </sections>
     <section class="coaches">
-        <div class="coaches__title">Qualified Nutrition & Health Coaches</div>
+        <div id="4"  class="coaches__title">Qualified Nutrition & Health Coaches</div>
         <div class="coaches__subtitle">Our coaches provide guidance and management in the major components of health, including diet and physical activity.</div>
         <div class="coaches__list">
-            <div class="coaches__box-content box-content box-content">
+            <div class="coaches__box-content">
                 <div class="coaches__photo-item">
                     <img class="coache-photo" src="./styles/image/coache1.png" alt="photo-coache" >
                 </div>
@@ -379,7 +381,7 @@
                     </div>
                 </div> 
             </div>
-            <div class="coaches__box-content box-content box-content">
+            <div class="coaches__box-content">
                 <div class="coaches__photo-item">
                     <img class="coache-photo" src="./styles/image/coaches2.png" alt="photo-coache" >
                 </div>
@@ -399,7 +401,9 @@
                     </div>
                 </div> 
             </div>
-            <div class="coaches__box-content box-content box-content">
+        </div>
+        <div class="coaches__list">
+            <div class="coaches__box-content">
                 <div class="coaches__photo-item">
                     <img class="coache-photo" src="./styles/image/coache3.png" alt="photo-coache" >
                 </div>
@@ -419,7 +423,7 @@
                     </div>
                 </div> 
             </div>
-            <div class="coaches__box-content box-content box-content">
+            <div class="coaches__box-content">
                 <div class="coaches__photo-item">
                     <img class="coache-photo" src="./styles/image/coache4.png" alt="photo-coache" >
                 </div>
@@ -494,5 +498,5 @@
             </div>
         </div>
     </footer>
-</body>
+   </body>
 </html>
