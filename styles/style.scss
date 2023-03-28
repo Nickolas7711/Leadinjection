@@ -53,6 +53,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 2px;
     span{
         @include font-face(400, 1.5rem, 32px);
     }
@@ -304,13 +305,12 @@ body{
 .dishes__conteiner{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     padding-top: 50px;
-    padding-bottom: 100px;
-    // padding: 1.82vw 14.85vw 3.91vw 14.85vw;
-    // max-width: 1920px;
-    gap: 32px;
+    padding-bottom: 125px;
+    gap: 100px;
+    
     
 }
 .dishes__preview-box{
@@ -319,6 +319,7 @@ body{
     align-items: center;
     background-color: $text-white;
     border-radius: 10px;
+    gap: 7px;
 }
 .title-item{
     @include font-face(400, 24px, 32px);
@@ -344,16 +345,17 @@ body{
     max-width: 320px;
 }
 .preview-box__photo{
-    padding: 10px 10px;
+    padding: 15px 15px;
+    
 }
 .preview-box__line{
-    margin-top: 32px;
+    margin-top: 30px;
 }
 .stories{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 30px 0;
+    padding: 50px 0;
 
     &__box-tsd{
         display: flex;
@@ -518,7 +520,7 @@ td, th{
 }
 .bor-red-right{
     border-right-color: red !important;
-}
+    }
 .bor-top-right-red{
     border-top-color: red !important;
     border-right-color: red !important;
@@ -529,9 +531,17 @@ td, th{
 
 .recommendation__box{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 72px;
+    flex-wrap: wrap;
+    padding: 50px 150px;
+    gap: 50px;
+
+}
+.recommendation__box-content{
+    display: flex;
+    flex-direction: row;
+
 
 }
 .recommendation__inner-list{
@@ -561,7 +571,6 @@ td, th{
 .subscription-mail__conteiner{
     display: flex;
     padding: 140px 49.85vw 182px 12.85vw;
-    width: 1652px;
     gap: 32px;
 }
 .subscription-mail__forma-box{
