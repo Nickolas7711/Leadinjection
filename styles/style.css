@@ -928,11 +928,6 @@ body {
     line-height: 44px;
   }
 }
-@media (max-width: 1622px) {
-  .revievs-scroll {
-    display: none;
-  }
-}
 @media (max-width: 1407px) {
   .description {
     line-height: 20px;
@@ -1217,6 +1212,9 @@ body {
   }
   .recommendation__box {
     padding: 5.645vw 3.52vw;
+  }
+  .revievs-scroll {
+    display: none;
   }
 }
 @media (max-width: 518px) {

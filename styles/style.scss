@@ -771,9 +771,7 @@ td, th{
    
 }
 @media(max-width: 1622px){
-.revievs-scroll{
-    display: none;
-}
+
    
 }
 
@@ -1011,7 +1009,7 @@ td, th{
         padding: 3.646vw 7.812vw ;
     }
     .revievs__box-content{
-       flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 }
 
@@ -1106,6 +1104,9 @@ td, th{
     }
     .recommendation__box{
         padding: 5.645vw 3.520vw;
+    }
+    .revievs-scroll{
+        display: none;
     }
     
 }
