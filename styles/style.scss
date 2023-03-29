@@ -394,10 +394,12 @@ body{
     
 }
 .revievs, .revievs-scroll{
-    padding: 24px 140px;
+    display: flex;
+    flex-direction: row;
+    padding: 1.25vw 7.291vw;
 
 }
-.box-content{
+.revievs__box-content{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -405,7 +407,7 @@ body{
 }
 
 
-.box-content--right{
+.revievs__box-content--right{
     display: flex;
     justify-content: flex-start;
     margin-left: 100px;
@@ -442,6 +444,7 @@ body{
 }
 
 
+
 .program-plan{
     display: flex;
     flex-direction: column;
@@ -461,7 +464,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 97vw;
     margin-bottom: 2.61vw;
     
     }
@@ -534,13 +537,14 @@ td, th{
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    padding: 50px 150px;
+    padding: 2.604vw 7.812vw;
     gap: 50px;
 
 }
 .recommendation__box-content{
     display: flex;
     flex-direction: row;
+    gap: 30px;
 
 
 }
@@ -563,15 +567,15 @@ td, th{
     margin-top: 30px;
 }
 .subscription-mail__forma-box{
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
         background-color: $text-white;
     border-radius: 10px;
 }
 .subscription-mail__conteiner{
     display: flex;
-    padding: 140px 49.85vw 182px 12.85vw;
-    gap: 32px;
+    padding: 7.292vw 49.85vw 9.479vw 12.85vw;
+    
 }
 .subscription-mail__forma-box{
     padding: 59px 60px;
@@ -623,13 +627,14 @@ td, th{
     &__title{
         @include font-face(500, 3rem, 56px);
         color: $head-text;
+        text-align: center;
         margin-top: 72px;
         
     }
     &__subtitle{
         @include font-face(400, 1.5rem, 32px);
         color: $ling-text;
-        width: 999px;
+        width: 52.031vw;
         text-align: center;
         padding: 10px 0 24px 0;
         
@@ -680,6 +685,7 @@ td, th{
 .additional-information{
     @include font-face(400, 1.5rem, 32px);
     color: $ling-text;
+    text-align: center;
     padding: 64px 0 72px 0;
 }
 .request__content{
@@ -697,6 +703,7 @@ td, th{
 .request__description{
     @include font-face(700, 1.5rem, 32px);
     color: $text-white;
+    text-align: center;
 }
 .footer__navigation{
     display: flex;
@@ -749,11 +756,7 @@ td, th{
     width: 560px;
     
 }
-// @media(max-width: 1751px){
-//     .stories__title{
-//     @include font-face(400, 3rem, 56px);
-//     }
-// } 
+
 
 @media(max-width: 1734px){
     .description{
@@ -771,10 +774,7 @@ td, th{
 .revievs-scroll{
     display: none;
 }
-.line-bott{
-    display: none;
-}
-    
+   
 }
 
 @media(max-width: 1407px){
@@ -805,7 +805,18 @@ td, th{
     .revievs__inner-list{
         margin: 0;
     }
+    .dishes__bgr-preview{
+        background-image: none;
+       
+    }
 }
+
+@media (max-width: 1281px){
+     .tabl{
+        display: none;
+     }
+}
+
 @media (max-width: 1154px){
    .stories{
     flex-wrap: wrap;
@@ -817,11 +828,12 @@ td, th{
    .stories__box-tsd{
     align-items: center;
    }
-   .recommendation__description{
-    width: 32.67vw;
-    margin: 0;
-   }
-
+    .recommendation__box{
+        justify-content: center;
+    }
+    .recommendation__title-item{
+        align-items: center;
+    }
 }
 
 
@@ -830,8 +842,19 @@ td, th{
         padding: 6.21vw 0 2.084vw 7.021vw;
     }
     .recommendation__title-item{
-        width: 360px;
+        width: 253px;
         text-align: center;
+    }
+    .coaches{
+        padding: 0 1.562vw;
+    }
+    .coaches__subtitle{
+        text-align: center;
+        padding: 1.562vw;
+
+    }
+    .subscription-mail__conteiner{
+        padding: 1.292vw 49.85vw 9.479vw 27.85vw;
     }
     
 }
@@ -884,7 +907,9 @@ td, th{
     .tabl{
         margin: 0;
     }
-    
+    .subscription-mail__bgr{
+        background: none;
+    }
 }
 
 
@@ -981,7 +1006,14 @@ td, th{
         
         
 }
-
+@media (max-width: 758px){
+    .recommendation__box{
+        padding: 3.646vw 7.812vw ;
+    }
+    .revievs__box-content{
+       flex-wrap: wrap;
+}
+}
 
 }
 @media (max-width: 738px){
@@ -1070,6 +1102,10 @@ td, th{
     }
     .recommendation__description{
         width: 78.84vw;
+    
+    }
+    .recommendation__box{
+        padding: 5.645vw 3.520vw;
     }
     
 }
@@ -1084,18 +1120,13 @@ td, th{
     line-height: 19px;
     font-size: 1.2rem;
     }
-    .description{
-        max-height: 40px;
-    }
+   
 
 
 }
 
 @media (max-width: 456px){
-
-    .description{
-        max-height: 0;
-    }
+  
     .stories__img img{
         width: 360px;
         height: 360px;
@@ -1103,24 +1134,59 @@ td, th{
     .dishes__preview-box{
         width: 364px;
     }
+    .revievs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
     .preview-box__line{
         width: 364px;
     }
     .preview-box__photo{
         width: 352px;
     }
+    
+    .recommendation__box-content{
+        justify-content: center;
+        gap: 0px;
+    }
+    .recommendation__description{
+        text-align: center;
+    }
+    .recommendation__box{
+        gap: 0px;
+    }
+}
+@media (max-width: 390px){
+    .dishes__conteiner{
+        padding-bottom: 10px;
+    }
+    .subscription-mail__conteiner{
+        padding: 8px;
+    }
+    .subscription-mail__forma-box{
+        padding: 30px 7px;
+    }
 
-.revievs{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.recommendation__box-content{
-    justify-content: center;
-    gap: 10px;
-}
-.recommendation__description{
-    text-align: center;
-}
-
+    .coache__photo{
+        width: 100%;
+    }
+    .coaches__box-content{
+        gap: 2.625vw;
+    }
+    .coache__name-social{
+        gap: 3.041vw;
+    }
+    .coache__inner-box{
+        gap: 1.521vw;
+    }
+    
+    .coache__inner-list{
+        width: 54.960vw;       
+    }
+    .coache__description{
+    width: 54.960vw;
+    }
 }
