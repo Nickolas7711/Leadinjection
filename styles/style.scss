@@ -195,12 +195,12 @@ content: url(./image/Arrow\ 3.png);
     border-radius: 32px;
 }
 &--red{
-    padding: 0.833vw 1.667vw;
+    padding: 16px 32px;
     background: $red;
     color: $text-white;
 }
 &--green{
-    padding: 0.833vw 1.667vw;
+    padding: 16px 32px;
     background: $health-green;
     border-radius: 32px;
     color: $text-white;
@@ -769,11 +769,11 @@ td, th{
     .title{
         line-height: 44px;
     }
-   
+
 }
 @media(max-width: 1622px){
 
-   
+
 }
 
 @media(max-width: 1407px){
@@ -853,7 +853,7 @@ td, th{
     }
     
 }
-@media (max-width: 1035px){
+@media (max-width: 1043px){
     .btn-box{
         line-height: 14px;
         font-size: 0.9rem;
@@ -886,45 +886,7 @@ td, th{
 }
 
 
-
-
-@media (max-width: 936px){
-    .contact{
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        width: 156px;
-        gap: 5px;
-
-    }
-    
-    .tabl{
-        margin: 0;
-    }
-    .subscription-mail__bgr{
-        background: none;
-    }
-}
-
-
-@media (max-width: 858px){
-    .fitness {
-        padding: 4.21vw 0 3.084vw 4.021vw;
-    }
-    .call-to-action{
-        width: 46vw;
-    }
-    .call-to-action__subtitle {
-    line-height: 29px;
-    font-size: 2.3rem;
-    }
-    .title{
-    line-height: 29px;
-    font-size: 2.3rem;
-    }
-    
-}
-
-@media (max-width: 830px){
+@media (max-width: 976px){
     .menu{
         justify-content: flex-end;
         align-items: flex-start;
@@ -953,7 +915,7 @@ td, th{
   .menu__btn {
     display: flex;
     align-items: center;  
-    position: fixed;
+    position: absolute;
     top: 63px;
     left: 20px;
     width: 26px;
@@ -992,7 +954,7 @@ td, th{
     padding: 100px 30px;
     list-style: none;
     text-align: left;
-    background-color: $bg-header-menu;
+    background: linear-gradient(to top, $bg-header-menu, 95%, rgba($bg-header-menu, .6) );
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
   }
 
@@ -1007,28 +969,80 @@ td, th{
     top: 0;
     transform: rotate(90deg);
   }
-  #menu__toggle:checked ~ .header__menu-item {
+ #menu__toggle:checked ~ .header__menu-item {
     visibility: visible;
     left: 0;
-  }
-  .menu__btn > span,
+}
+.menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
-  transition-duration: .25s;
+    transition-duration: .25s;
 }
 .header__menu-item {
-  transition-duration: .25s;
+    transition-duration: .25s;
 }
 .menu__item {
-  transition-duration: .25s;
+    transition-duration: .25s;
 }
 .header__menu-dropdown-content{
         left: 0px;
     
-    
         
 }
 }
+
+
+
+@media (max-width: 936px){
+    .contact{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 156px;
+        gap: 5px;
+
+    }
+    
+    .tabl{
+        margin: 0;
+    }
+    .subscription-mail__bgr{
+        background: none;
+    }
+    .subscription-mail__conteiner{
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .call-to-action{
+        min-width: 380px;
+        min-height: 150px;
+        padding:0 10px;
+    }
+}
+@media (max-width: 892px){
+    .call-to-action{
+        width: 22.760vw;
+        height: 244px;
+    }
+}
+
+
+@media (max-width: 858px){
+    .fitness {
+        padding: 5.042vw 1.042vw;
+    
+    }
+    
+    .call-to-action__subtitle {
+    line-height: 29px;
+    font-size: 2.3rem;
+    }
+    .title{
+    line-height: 29px;
+    font-size: 2.3rem;
+    }
+} 
+
 @media (max-width: 758px){
     .recommendation__box{
         padding: 3.646vw 7.812vw ;
@@ -1036,34 +1050,28 @@ td, th{
     .revievs__box-content{
     flex-wrap: wrap;
 }
+ .btn-box{
+    gap:0.989vw ;
+ }
+ .fitness{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    background-color: $bg-pro;
+    height: 100%;
+    
+ }
+ 
+ .fitness__call-to-action{
+        gap: 10px;
+ }
 }
 
 
 @media (max-width: 738px){
-    .fitness {
-        padding: 4.21vw 0 3.084vw 4.021vw;
-    }
-    .call-to-action{
-        width: 49vw;
-    }
-    .call-to-action__subtitle {
-    line-height: 24px;
-    font-size: 1.8rem;
-    }
-    .title{
-    line-height: 24px;
-    font-size: 1.8rem;
-    }
-    .description{
-        max-height: 62px;
-        overflow: hidden;
-    }
-    .btn-box{
-        flex-wrap: wrap;
-        font-size: 0.8rem;
-        gap: 10px;
-        
-    }
+       
     .tabl__description b{
         font-size: 2.625rem;
     }
@@ -1073,11 +1081,6 @@ td, th{
     
 }
 @media (max-width: 658px){
-    .fitness {
-        padding: 4.21vw 0 3.084vw 2.021vw;
-        flex-wrap: nowrap;
-    }
-    
     .recipes__subtitle{
         text-align: center;
         margin: 0;
@@ -1099,26 +1102,11 @@ td, th{
     .program-plan__content{
         gap: 20px;
     }
-   
+
 }
 
 @media (max-width: 557px){
-        
     
-    .call-to-action__subtitle {
-    line-height: 20px;
-    font-size: 1.5rem;
-    }
-    .title{
-    line-height: 20px;
-    font-size: 1.5rem;
-    }
-    .description{
-        max-height: 56px;
-    }
-    .btn-box{
-        line-height: 22px;
-    }
     .recommendation__title-item{
         text-align: center;
         
@@ -1136,22 +1124,34 @@ td, th{
     .arrow-box{
         display: none;
     }
-}
+    .subscription-mail__conteiner{
 
-@media (max-width: 518px){
+        padding: 20px;
+    }
+    .subscription-mail__forma-box{
+        padding: 30px 7px;
+    }
+    .coache__photo{
+        width: 100%;
+    }
+    .coaches__box-content{
+        gap: 2.625vw;
+    }
+    .coache__name-social{
+        gap: 3.041vw;
+    }
+    .coache__inner-box{
+        gap: 1.521vw;
+    }
     
-    .call-to-action__subtitle {
-    line-height: 19px;
-    font-size: 1.2rem;
+    .coache__inner-list{
+        width: 54.960vw;       
     }
-    .title{
-    line-height: 19px;
-    font-size: 1.2rem;
+    .coache__description{
+    width: 54.960vw;
     }
-   
-
-
 }
+
 
 @media (max-width: 456px){
   
@@ -1194,27 +1194,7 @@ td, th{
     .subscription-mail__conteiner{
         padding: 8px;
     }
-    .subscription-mail__forma-box{
-        padding: 30px 7px;
-    }
-
-    .coache__photo{
-        width: 100%;
-    }
-    .coaches__box-content{
-        gap: 2.625vw;
-    }
-    .coache__name-social{
-        gap: 3.041vw;
-    }
-    .coache__inner-box{
-        gap: 1.521vw;
-    }
     
-    .coache__inner-list{
-        width: 54.960vw;       
-    }
-    .coache__description{
-    width: 54.960vw;
-    }
+
+    
 }
