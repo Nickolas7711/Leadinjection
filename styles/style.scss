@@ -75,6 +75,14 @@ body{
     background-color: $bg-header-menu;
     
 }
+   /* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+}
+
+.header__hamburger-menu{
+    display: flex;
+}
 
 .header__menu-item{
     display: flex;
@@ -87,7 +95,7 @@ body{
         color: $ling-text;
     }
     a:hover{
-      
+    
         border-bottom: 2px solid $ling-text;
     }
     a.menu__dropbtn{
@@ -95,19 +103,14 @@ body{
         
     }
 }
-.menu__dropdown{
+.header__menu-dropdown::before{
+content: url(./image/Arrow\ 3.png);
     position: absolute;
-    margin-left: 555px;
-    background: $bg-header-menu;
-    border: none;
+    margin-left: 35px;
+
 }
-.menu__dropbtn{
-    background-color: $bg-header-menu;
-}
-.menu__dropbtn:hover{
-    background-color: $health-green;
-}
-.menu__dropdown-content {
+
+.header__menu-dropdown-content {
     display: none;
     position: absolute;
     z-index: 5;
@@ -131,7 +134,7 @@ body{
         border: none;
     }
 }
-.menu__dropdown:hover .menu__dropdown-content {
+.header__menu-dropdown:hover .header__menu-dropdown-content {
     display: block;
     
 }
@@ -192,12 +195,12 @@ body{
     border-radius: 32px;
 }
 &--red{
-    padding: 16px 32px;
+    padding: 0.833vw 1.667vw;
     background: $red;
     color: $text-white;
 }
 &--green{
-    padding: 16px 32px;
+    padding: 0.833vw 1.667vw;
     background: $health-green;
     border-radius: 32px;
     color: $text-white;
@@ -567,9 +570,7 @@ td, th{
     margin-top: 30px;
 }
 .subscription-mail__forma-box{
-    // display: flex;
-    // flex-direction: column;
-        background-color: $text-white;
+    background-color: $text-white;
     border-radius: 10px;
 }
 .subscription-mail__conteiner{
@@ -634,7 +635,7 @@ td, th{
     &__subtitle{
         @include font-face(400, 1.5rem, 32px);
         color: $ling-text;
-        width: 52.031vw;
+        width: 92.031vw;
         text-align: center;
         padding: 10px 0 24px 0;
         
@@ -846,11 +847,7 @@ td, th{
     .coaches{
         padding: 0 1.562vw;
     }
-    .coaches__subtitle{
-        text-align: center;
-        padding: 1.562vw;
-
-    }
+   
     .subscription-mail__conteiner{
         padding: 1.292vw 49.85vw 9.479vw 27.85vw;
     }
@@ -899,9 +896,7 @@ td, th{
         gap: 5px;
 
     }
-    .menu__dropdown-content{
-        right: 0;
-    }
+    
     .tabl{
         margin: 0;
     }
@@ -941,9 +936,9 @@ td, th{
         display: none;
         position: absolute;
         top: 100px;
-        left: 0;
+        left: 7px;
         background: $bg-header-menu;
-        width: 298px;
+        width: 300px;
         padding: 15px 10px;
     
         li{
@@ -952,57 +947,87 @@ td, th{
         
 
     }
+ 
 
-    .header__menu li{
-        width: 100%;
-    }
-    .header__menu nav::before,
-    .header__menu::after {
-    content: '';
-    position: absolute;
-    top: 61px;
-    left: 10px;
-    display: block;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAwCAMAAAA8VkqRAAAABlBMVEUAAAAAAAClZ7nPAAAAAXRSTlMAQObYZgAAAE5JREFUeAFjwAkYcQC6SFAKBt4fo/6AaMMUQTUQIYJpFaqrMIICzkATR2Hi5uDUjmkh7tDAHUq4Qw8ujl+CsFEEHDVowg1n1OJKDLiTDwBLrgJ9vkuXOwAAAABJRU5ErkJggg==);
+  /* стилизуем кнопку */
+  .menu__btn {
+    display: flex;
+    align-items: center;  
+    position: fixed;
+    top: 63px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
     cursor: pointer;
-    height: 24px;
-    width: 24px;
-    }
-    .header__menu nav::before,
-    .header__menu::after {
-    background-color: $health-green;
-    border: 9px solid $health-green;
-    }
-    .header__menu::after {
-    background-position: 24px 24px;
     z-index: 1;
-    }
-    .header__menu nav::before {
-    z-index: 2;
-    }
-    .header__menu nav:focus::before {
-    z-index: 0;
-    }
-    .header__menu nav:focus ul,
-    .menu ul:hover {
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
     display: block;
-    }
-    .header__menu nav{
-        display: block;
-    }
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  /* контейнер меню */
+.header__menu-item {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 100px 30px;
+    list-style: none;
+    text-align: left;
+    background-color: $bg-header-menu;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .header__menu-item {
+    visibility: visible;
+    left: 0;
+  }
+  .menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.header__menu-item {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+.header__menu-dropdown-content{
+        left: 0px;
     
-    .menu__dropdown{
-        position: relative;
-        margin-left: 42px;
-        margin-top: -33px;
-        background: none;
+    
         
-        
-    }
-    .menu__dropdown-content{
-        left: -54px;
-        
-        
+}
 }
 @media (max-width: 758px){
     .recommendation__box{
@@ -1013,7 +1038,7 @@ td, th{
 }
 }
 
-}
+
 @media (max-width: 738px){
     .fitness {
         padding: 4.21vw 0 3.084vw 4.021vw;
@@ -1105,10 +1130,12 @@ td, th{
     .recommendation__box{
         padding: 5.645vw 3.520vw;
     }
-    .revievs-scroll{
+    .revievs__box-content--right{
+        margin: 0;
+    }
+    .arrow-box{
         display: none;
     }
-    
 }
 
 @media (max-width: 518px){

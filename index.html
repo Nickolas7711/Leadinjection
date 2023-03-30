@@ -23,27 +23,27 @@
             </nav>
         </div>
         <div class="header__menu menu">
-            <nav tabindex='1'>
+            <nav class="header__hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
                 <ul class="header__menu-item">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">Recipes</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Program</a></li>
-                    <li><a href="#">Princing</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <div class="menu__dropdown">
-                        <button class="menu__dropbtn">
-                            <img src="./styles/image/Arrow 3.png" alt="">
-                        </button>
-                        <ul class="menu__dropdown-content">
+                    <li><a class="menu__item" href="#">Home</a></li>
+                    <li><a class="menu__item" href="#">How It Works</a></li>
+                    <li><a class="menu__item" href="#">Recipes</a></li>
+                    <li><a class="menu__item" href="#">Reviews</a></li>
+                    <li><a class="menu__item" href="#">Program</a></li>
+                    <li><a class="menu__item" href="#">Princing</a></li>
+                    <li class="header__menu-dropdown"><a class="menu__item" href="#">Blog</a>
+                        <ul class="header__menu-dropdown-content">
                             <li><a href="#1">How It Works</a></li>
                             <li><a href="#2">Weight Loss Success Stories</a></li>
                             <li><a href="#3">What Does Program Include?</a></li>
                             <li><a href="#4">Qualified Nutrition & Health Coaches</a></li>
                             <li><a href="#5">Subscribe to Our Newsletters</a></li>
                         </ul>
-                    </div>
+                    </li>
                 </ul>
             </nav>
             <div class="contact">
