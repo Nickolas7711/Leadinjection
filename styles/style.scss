@@ -400,6 +400,7 @@ content: url(./image/Arrow\ 3.png);
     display: flex;
     flex-direction: row;
     padding: 1.25vw 7.291vw;
+    gap: 30px;
 
 }
 .revievs__box-content{
@@ -410,13 +411,13 @@ content: url(./image/Arrow\ 3.png);
 }
 
 
-.revievs__box-content--right{
+.revievs-scroll--right{
     display: flex;
     justify-content: flex-start;
-    margin-left: 100px;
+    margin-left: 5.208vw;
 }
 .revievs__inner-list{
-    margin-right: 159px;
+    margin-right: 8.281vw;
 }
 
 .revievs__inner-list{
@@ -426,7 +427,7 @@ content: url(./image/Arrow\ 3.png);
 .reviev__description{
     @include font-face(400, 1rem, 24px);
     color: $head-text;
-    width: 280px;
+    width: 279px;
     margin-bottom: 16px;
 }
 
@@ -801,7 +802,7 @@ td, th{
     .description{
         text-align: left;
     }
-    .revievs__inner-list{
+    .revievs-scroll--right{
         margin: 0;
     }
     .dishes__bgr-preview{
@@ -882,6 +883,9 @@ td, th{
     }
     .tabl__title, .tabl__title--price{
         font-size: 1rem;
+    }
+    .revievs, .revievs-scroll--right{
+        flex-wrap: wrap;
     }
 }
 
@@ -987,7 +991,6 @@ td, th{
 .header__menu-dropdown-content{
         left: 0px;
     
-        
 }
 }
 
@@ -1071,7 +1074,7 @@ td, th{
 
 
 @media (max-width: 738px){
-       
+    
     .tabl__description b{
         font-size: 2.625rem;
     }
@@ -1118,7 +1121,7 @@ td, th{
     .recommendation__box{
         padding: 5.645vw 3.520vw;
     }
-    .revievs__box-content--right{
+    .revievs-scroll--right{
         margin: 0;
     }
     .arrow-box{

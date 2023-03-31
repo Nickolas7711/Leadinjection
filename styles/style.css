@@ -438,6 +438,7 @@ body {
   display: flex;
   flex-direction: row;
   padding: 1.25vw 7.291vw;
+  gap: 30px;
 }
 
 .revievs__box-content {
@@ -447,14 +448,14 @@ body {
   gap: 30px;
 }
 
-.revievs__box-content--right {
+.revievs-scroll--right {
   display: flex;
   justify-content: flex-start;
-  margin-left: 100px;
+  margin-left: 5.208vw;
 }
 
 .revievs__inner-list {
-  margin-right: 159px;
+  margin-right: 8.281vw;
 }
 
 .revievs__inner-list {
@@ -469,7 +470,7 @@ body {
   font-size: 1rem;
   line-height: 24px;
   color: #212D32;
-  width: 280px;
+  width: 279px;
   margin-bottom: 16px;
 }
 
@@ -950,7 +951,7 @@ body {
   .description {
     text-align: left;
   }
-  .revievs__inner-list {
+  .revievs-scroll--right {
     margin: 0;
   }
   .dishes__bgr-preview {
@@ -1021,6 +1022,9 @@ body {
   }
   .tabl__title, .tabl__title--price {
     font-size: 1rem;
+  }
+  .revievs, .revievs-scroll--right {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 976px) {
@@ -1223,7 +1227,7 @@ body {
   .recommendation__box {
     padding: 5.645vw 3.52vw;
   }
-  .revievs__box-content--right {
+  .revievs-scroll--right {
     margin: 0;
   }
   .arrow-box {
